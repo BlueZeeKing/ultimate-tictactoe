@@ -1,5 +1,5 @@
-import { Button } from "@chakra-ui/react";
 import Head from "next/head";
+import Button from "../components/Button";
 
 export default function Home() {
   return (
@@ -10,7 +10,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main><Button>Hello</Button></main>
+      <main className="w-full grid place-content-center content-center">
+        <div className="mt-24 shadow p-4 rounded">
+          <h1 className="text-slate-800 text-6xl p-8 text-center font-bold">
+            Ultimate Tic Tac Toe
+          </h1>
+          <div className="flex flex-col space-y-4 mx-32">
+            <Button icon={"p"}>Singleplayer</Button>
+            <Button>Multiplayer</Button>
+            <Button disabled>Online</Button>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
